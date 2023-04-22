@@ -9,6 +9,11 @@ const port = process.env.PORT || 6000
 
 connetDB()
 app.use(cors())
+app.use(cors(
+    {
+        origin: "*",
+    }
+))
 // app.use(morgon('dev'))
 app.use(express.json())
 
